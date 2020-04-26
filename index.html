@@ -47,10 +47,12 @@
             let bill = document.getElementById("bill").value;
             let noOfPeople = document.getElementById("noOfPeople").value;
             let tip = document.getElementById("tip").value;
-            let b = (bill+tip);
-            let amount = (b/noOfPeople);
+
+            let b = (+bill + +tip);
+            let amount = (+b / +noOfPeople);
             alert(" amount for per person " + amount);
         }
     </script>
 </body>
+
 </html>
