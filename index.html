@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Study Jam</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1 id="name">DUTCH TAB</h1>
+        <form id="load">
+            <label>
+                How much was your bill?
+            </label><br>
+            <input id="bill" type="text" placeholder="0.00 rupees" required />
+            <br>
+            <label>
+                How was our service?
+            </label><br>
+            <select id="service" placeholder="Please choose an option">
+                <option value="Good">Good</option>
+                <option value="Delicious">Delicious</option>
+                <option value="sublime">sublime</option>
+            </select>
+            <br>
+            <label>
+                How many people are sharing the bill?
+            </label><br>
+            <input id="noOfPeople" type="text" placeholder="0 people" required />
+            <br>
+            <label>
+                Tip amount
+            </label><br>
+            <input id="tip" type="text" placeholder="0.00 rupees" required />
+            <br>
+            <br>
+            <button type="submit" onclick="calculate()">CALCULATE</button>
+        </form>
+    </div>
+    <!-- //<script src="index.js"></script> -->
+    <script>
+        calculate = () => {
+            let bill = document.getElementById("bill").value;
+            let noOfPeople = document.getElementById("noOfPeople").value;
+            let tip = document.getElementById("tip").value;
+            let b = (bill+tip);
+            let amount = (b/noOfPeople);
+            alert(" amount for per person " + amount);
+        }
+    </script>
+</body>
+</html>
